@@ -1,0 +1,54 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Title from '../../components/UI/Title.astro';
+---
+<BaseLayout title="About Fudi Team">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+    <Title as="h1" class="text-4xl font-extrabold text-[var(--color-neutral)] mb-8">About Fudi</Title>
+    <p class="text-xl text-[var(--color-primary)] mb-12 max-w-2xl mx-auto">
+      At Fudi, our mission is to transform and professionalize internal communication for SMEs.
+    </p>
+
+    <div class="space-y-12">
+      <section>
+        <Title as="h2" class="text-2xl font-bold mb-4 text-[var(--color-neutral)]">Our Mission</Title>
+        <p class="text-lg text-[var(--color-tertiary)] mx-auto max-w-3xl">
+          We noticed that while large corporations had robust tools to keep their teams aligned, Small and Medium Enterprises often relied on fragmented, insecure methods. Fudi built Centralis to democratize access to a professional, secure, and intuitive corporate hub.
+        </p>
+      </section>
+
+      <section>
+        <Title as="h2" class="text-2xl font-bold mb-8 text-[var(--color-neutral)]">The Engineering Team</Title>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <!-- Team Member Placeholder -->
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="w-24 h-24 mx-auto rounded-full bg-[var(--color-background)] mb-4"></div>
+            <h3 class="font-bold text-lg text-[var(--color-neutral)]">Alice Developer</h3>
+            <p class="text-sm text-[var(--color-primary)] font-semibold mb-2">Frontend Lead (Vue)</p>
+            <p class="text-[var(--color-tertiary)] text-sm">Focuses on delivering seamless admin experiences.</p>
+          </div>
+          <!-- Team Member Placeholder -->
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="w-24 h-24 mx-auto rounded-full bg-[var(--color-background)] mb-4"></div>
+            <h3 class="font-bold text-lg text-[var(--color-neutral)]">Bob Engineer</h3>
+            <p class="text-sm text-[var(--color-primary)] font-semibold mb-2">Mobile Lead (Flutter)</p>
+            <p class="text-[var(--color-tertiary)] text-sm">Ensures employees are connected everywhere.</p>
+          </div>
+          <!-- Team Member Placeholder -->
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="w-24 h-24 mx-auto rounded-full bg-[var(--color-background)] mb-4"></div>
+            <h3 class="font-bold text-lg text-[var(--color-neutral)]">Charlie Systems</h3>
+            <p class="text-sm text-[var(--color-primary)] font-semibold mb-2">Backend/DevOps</p>
+            <p class="text-[var(--color-tertiary)] text-sm">Architecting the multi-tenant SaaS core.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

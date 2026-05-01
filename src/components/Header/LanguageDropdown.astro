@@ -1,0 +1,31 @@
+---
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const urlPath = Astro.url.pathname.replace(/^\/(en|es)/, '');
+---
+<div class="relative">
+  <button id="lang-btn" class="flex items-center space-x-1 text-[var(--color-neutral)] hover:opacity-80">
+    <span class="label-text">{lang.toUpperCase()}</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+  </button>
+  <div id="lang-menu" class="hidden absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg py-1 border border-gray-100 z-50">
+    <a href={`/en${urlPath}`} class="block px-4 py-2 text-sm text-[var(--color-neutral)] hover:bg-gray-100">EN</a>
+    <a href={`/es${urlPath}`} class="block px-4 py-2 text-sm text-[var(--color-neutral)] hover:bg-gray-100">ES</a>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById('lang-btn');
+  const menu = document.getElementById('lang-menu');
+  if(btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target as Node) && !menu.contains(e.target as Node)) {
+        menu.classList.add('hidden');
+      }
+    });
+  }
+</script>

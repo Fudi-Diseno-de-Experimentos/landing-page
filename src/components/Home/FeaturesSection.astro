@@ -1,0 +1,46 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Title from '../UI/Title.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const features = [
+  {
+    icon: `<svg class="w-8 h-8 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>`,
+    titleKey: 'features.card1.title',
+    descKey: 'features.card1.desc'
+  },
+  {
+    icon: `<svg class="w-8 h-8 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>`,
+    titleKey: 'features.card2.title',
+    descKey: 'features.card2.desc'
+  },
+  {
+    icon: `<svg class="w-8 h-8 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>`,
+    titleKey: 'features.card3.title',
+    descKey: 'features.card3.desc'
+  }
+];
+---
+<section id="features" class="py-20 bg-[var(--color-background)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <Title as="h2" class="text-3xl md:text-4xl font-bold text-[var(--color-neutral)]">
+        {t('features.title')}
+      </Title>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {features.map(f => (
+        <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          <div class="w-14 h-14 rounded-lg bg-[var(--color-background)] flex items-center justify-center mb-6">
+            <Fragment set:html={f.icon} />
+          </div>
+          <Title as="h3" class="text-xl font-bold mb-3 text-[var(--color-neutral)]">{t(f.titleKey)}</Title>
+          <p class="text-[var(--color-tertiary)]">{t(f.descKey)}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section

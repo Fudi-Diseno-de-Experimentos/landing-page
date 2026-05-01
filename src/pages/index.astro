@@ -1,0 +1,6 @@
+---
+import { defaultLang } from '../i18n/index';
+
+// Redirigir siempre a /en o al default lang
+return Astro.redirect(`/${defaultLang}`);
+---

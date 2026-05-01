@@ -1,0 +1,46 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import LanguageDropdown from '../Header/LanguageDropdown.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<footer class="bg-white border-t border-gray-100 py-12 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand & Mission -->
+      <div class="col-span-1 md:col-span-2">
+        <a href={`/${lang}`} class="flex items-center gap-2 mb-4">
+          <img src="/logo-centralis.svg" alt="Centralis Logo" class="h-8 w-auto" onerror="this.src='https://placehold.co/40x40/556973/FFF?text=C'" />
+          <span class="font-bold text-xl text-[var(--color-neutral)] tracking-tight">Centralis <span class="text-sm font-normal text-[var(--color-tertiary)]">by Fudi</span></span>
+        </a>
+        <p class="text-[var(--color-tertiary)] text-sm mb-6 max-w-sm">
+          {t('footer.mission')}
+        </p>
+        <LanguageDropdown />
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="text-sm font-semibold text-[var(--color-neutral)] tracking-wider uppercase mb-4">Platform</h3>
+        <ul class="space-y-3">
+          <li><a href={`/${lang}/product`} class="text-sm text-[var(--color-tertiary)] hover:text-[var(--color-primary)]">{t('footer.links.product')}</a></li>
+          <li><a href={`/${lang}/about-team`} class="text-sm text-[var(--color-tertiary)] hover:text-[var(--color-primary)]">{t('footer.links.about')}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold text-[var(--color-neutral)] tracking-wider uppercase mb-4">Support</h3>
+        <ul class="space-y-3">
+          <li><a href={`/${lang}/help-center`} class="text-sm text-[var(--color-tertiary)] hover:text-[var(--color-primary)]">{t('footer.links.help')}</a></li>
+          <li><a href={`/${lang}/privacy-policy`} class="text-sm text-[var(--color-tertiary)] hover:text-[var(--color-primary)]">{t('footer.links.privacy')}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-8 border-t border-gray-100">
+      <p class="text-sm text-[var(--color-tertiary)] text-center">
+        {t('footer.rights')}
+      </p>
+    </div>
+  </div>
+</footer>

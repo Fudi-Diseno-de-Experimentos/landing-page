@@ -1,0 +1,31 @@
+---
+import '../assets/global.css';
+import Header from '../components/Header/Header.astro';
+import Footer from '../components/Footer/Footer.astro';
+import { getLangFromUrl } from '../i18n/utils';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Centralis by Fudi - Internal communication platform" } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | Centralis</title>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

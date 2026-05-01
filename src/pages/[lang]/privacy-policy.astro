@@ -1,0 +1,31 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Title from '../../components/UI/Title.astro';
+---
+<BaseLayout title="Privacy Policy">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-white shadow-sm mt-10 rounded-xl mb-20 border border-gray-100">
+    <Title as="h1" class="text-4xl font-extrabold text-[var(--color-neutral)] mb-10 text-center">Privacy Policy</Title>
+    <div class="prose prose-lg text-[var(--color-neutral)] mx-auto">
+      <h2>SaaS Agreement and Terms of Service</h2>
+      <p>
+        These terms govern your use of Centralis, a product developed by Fudi. We are committed to providing a secure and reliable platform for your internal corporate communications.
+      </p>
+
+      <h3>Data Ownership</h3>
+      <p>
+        <strong>Your data is yours.</strong> Organizations that use Centralis retain full ownership of all data submitted, stored, and processed through our service. Fudi only processes this data for the purpose of providing the service and will not sell, rent, or share your proprietary information with third parties.
+      </p>
+
+      <h3>Information Security</h3>
+      <p>
+        We employ industry-standard security measures to protect against unauthorized access to or unauthorized alteration, disclosure, or destruction of data.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

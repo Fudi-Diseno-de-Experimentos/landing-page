@@ -1,0 +1,20 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/Home/HeroSection.astro';
+import FeaturesSection from '../../components/Home/FeaturesSection.astro';
+import StepsSection from '../../components/Home/StepsSection.astro';
+import CTASection from '../../components/Home/CTASection.astro';
+---
+
+<BaseLayout title="Home">
+  <HeroSection />
+  <FeaturesSection />
+  <StepsSection />
+  <CTASection />
+</BaseLayout>

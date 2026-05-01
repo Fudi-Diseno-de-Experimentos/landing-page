@@ -1,0 +1,37 @@
+{
+  "nav.features": "Características",
+  "nav.howItWorks": "Cómo funciona",
+  "nav.product": "Producto",
+  "nav.helpCenter": "Centro de Ayuda",
+  "nav.signIn": "Iniciar Sesión",
+  "nav.startMeeting": "Iniciar Reunión",
+  
+  "hero.title": "Donde tu equipo se mantiene alineado",
+  "hero.subtitle": "El centro para anuncios oficiales, eventos corporativos y comunicación interna en tiempo real. Mantén a cada empleado conectado a la visión de la empresa.",
+  "hero.getStarted": "Empezar",
+  "hero.explore": "Explorar Características",
+  
+  "features.title": "Diseñado para la Cohesión Corporativa",
+  "features.card1.title": "Anuncios Oficiales",
+  "features.card1.desc": "Difunde actualizaciones importantes de forma clara.",
+  "features.card2.title": "Gestión de Eventos",
+  "features.card2.desc": "Programa y administra eventos corporativos sin esfuerzo.",
+  "features.card3.title": "Chat Interno Seguro",
+  "features.card3.desc": "Comunícate de forma segura dentro de tu organización.",
+  
+  "steps.title": "Tres pasos para un espacio de trabajo conectado",
+  "steps.step1": "1. Centraliza la Información",
+  "steps.step2": "2. Organiza y Programa",
+  "steps.step3": "3. Involucra y Colabora",
+  
+  "cta.title": "¿Listo para unir a tu fuerza laboral?",
+  "cta.startFree": "Comienza Gratis",
+  "cta.bookDemo": "Reserva una Demo",
+  
+  "footer.mission": "Transformando la comunicación interna para las PyMEs modernas.",
+  "footer.rights": "© 2024 Centralis por Fudi. Todos los derechos reservados.",
+  "footer.links.product": "Producto",
+  "footer.links.about": "Sobre el Equipo",
+  "footer.links.help": "Centro de Ayuda",
+  "footer.links.privacy": "Política de Privacidad"
+}

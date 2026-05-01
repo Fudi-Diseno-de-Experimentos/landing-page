@@ -1,0 +1,39 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Title from '../UI/Title.astro';
+import Button from '../UI/Button.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section class="pt-20 pb-16 md:pt-32 md:pb-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Content -->
+      <div class="z-10 text-center lg:text-left">
+        <Title as="h1" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--color-neutral)] leading-tight mb-6">
+          {t('hero.title')}
+        </Title>
+        <p class="text-lg sm:text-xl text-[var(--color-tertiary)] mb-8 max-w-2xl mx-auto lg:mx-0">
+          {t('hero.subtitle')}
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+          <Button variant="primary" href="#" class="w-full sm:w-auto text-lg px-8 py-3">{t('hero.getStarted')}</Button>
+          <Button variant="outlined" href="#features" class="w-full sm:w-auto text-lg px-8 py-3">{t('hero.explore')}</Button>
+        </div>
+      </div>
+      
+      <!-- Image/Mockup -->
+      <div class="relative mt-12 lg:mt-0 z-10 flex justify-center lg:justify-end">
+        <div class="relative mx-auto w-full max-w-md lg:max-w-full">
+           <!-- Placeholder for Flutter Mobile App Mockup -->
+           <img 
+            src="./public/Background-Border.svg"
+            alt="Centralis App Mockup" 
+            class="rounded-3xl shadow-2xl border border-gray-100 object-cover"
+           />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

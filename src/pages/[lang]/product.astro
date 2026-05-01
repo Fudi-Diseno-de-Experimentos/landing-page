@@ -1,0 +1,42 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Title from '../../components/UI/Title.astro';
+---
+<BaseLayout title="Product & Architecture">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <Title as="h1" class="text-4xl font-extrabold text-[var(--color-neutral)] mb-8">Platform & Architecture</Title>
+    
+    <div class="space-y-12 text-lg text-[var(--color-neutral)]">
+      <section>
+        <Title as="h2" class="text-2xl font-bold mb-4 text-[var(--color-primary)]">System Overview</Title>
+        <p class="mb-4">
+          Centralis operates on a multi-tenancy SaaS model. This ensures that while multiple organizations use the same underlying infrastructure, each company's data is strictly isolated and secure.
+        </p>
+      </section>
+
+      <section>
+        <Title as="h2" class="text-2xl font-bold mb-4 text-[var(--color-primary)]">The Ecosystem</Title>
+        <p class="mb-4">
+          Our platform is a synergy of two main applications:
+        </p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Web Administration Panel:</strong> Built with Vue.js, this robust interface is designed for Managers to configure company settings, schedule events, and broadcast announcements.</li>
+          <li><strong>Native Mobile App:</strong> Developed in Flutter, this app provides employees with on-the-go access to company news, internal chat, and their event calendar.</li>
+        </ul>
+      </section>
+
+      <section>
+        <Title as="h2" class="text-2xl font-bold mb-4 text-[var(--color-primary)]">Role Management</Title>
+        <p class="mb-4">
+          Access control is central to the platform. The <strong>Manager</strong> role has elevated permissions to administer data isolated by their specific <code>company_id</code>. Employees have tailored access to view announcements, participate in chats, and RSVP to events securely within their organizational environment.
+        </p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
