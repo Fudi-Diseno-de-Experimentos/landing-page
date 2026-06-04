@@ -40,9 +40,9 @@
   "product.overview.title": "System Overview",
   "product.overview.desc": "Centralis operates on a multi-tenancy SaaS model. This ensures that while multiple organizations use the same underlying infrastructure, each company's data is strictly isolated and secure.",
   "product.ecosystem.title": "The Ecosystem",
-  "product.ecosystem.desc": "Our platform is a synergy of two main applications:",
-  "product.ecosystem.webPanel": "Web Administration Panel: Built with Vue.js, this robust interface is designed for Managers to configure company settings, schedule events, and broadcast announcements.",
-  "product.ecosystem.mobileApp": "Native Mobile App: Developed in Flutter, this app provides employees with on-the-go access to company news, internal chat, and their event calendar.",
+  "product.ecosystem.desc": "Our platform is a unified mobile application:",
+  "product.ecosystem.webPanel": "Manager Mobile App: The same mobile app grants Managers elevated permissions to configure company settings, schedule events, broadcast announcements, and manage departmental channels.",
+  "product.ecosystem.mobileApp": "Employee Mobile App: All employees use the same mobile application to access company news, participate in internal chat, view their event calendar, and RSVP securely.",
   "product.roles.title": "Role Management",
   "product.roles.desc": "Access control is central to the platform. The Manager role has elevated permissions to administer data isolated by their specific company_id. Employees have tailored access to view announcements, participate in chats, and RSVP to events securely within their organizational environment.",
 
@@ -51,10 +51,10 @@
   "helpCenter.subtitle": "Frequently asked questions about Centralis.",
   "helpCenter.faq1.q": "How is my company's data privacy maintained?",
   "helpCenter.faq1.a": "Centralis utilizes a strict Multi-tenancy isolation architecture. Each organization is assigned a unique identifier (company_id) ensuring that your data is logically separated and inaccessible by any other tenant on the platform.",
-  "helpCenter.faq2.q": "Can I segment information by department?",
-  "helpCenter.faq2.a": "Yes. Centralis supports departmental channels allowing managers to direct specific announcements and create dedicated chat spaces for different teams within the organization.",
+  "helpCenter.faq2.q": "How does the internal chat work?",
+  "helpCenter.faq2.a": "Centralis provides a secure internal chat where all employees within the same company can communicate in real time. Conversations are fully isolated by company, ensuring privacy and confidentiality.",
   "helpCenter.faq3.q": "What permissions does the Manager role have?",
-  "helpCenter.faq3.a": "Managers have full administrative control over their company's workspace. They can invite employees, create official announcements, manage the corporate event calendar, and oversee departmental channels.",
-  "helpCenter.faq4.q": "On what devices is Centralis available?",
-  "helpCenter.faq4.a": "Centralis offers a comprehensive Web Administration Panel for managers and a fully-featured Native Mobile Application (available for iOS and Android) tailored for employees to stay connected anywhere."
+  "helpCenter.faq3.a": "Managers have full administrative control over their company's workspace. They can invite employees, create official announcements, manage the corporate event calendar, and configure company settings.",
+  "helpCenter.faq4.q": "On which mobile devices is Centralis available?",
+  "helpCenter.faq4.a": "Centralis is available as a fully-featured Native Mobile Application for both iOS and Android, designed for all users to stay connected anywhere."
 }
