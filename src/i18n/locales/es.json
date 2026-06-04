@@ -33,5 +33,28 @@
   "footer.links.product": "Producto",
   "footer.links.about": "Sobre el Equipo",
   "footer.links.help": "Centro de Ayuda",
-  "footer.links.privacy": "Política de Privacidad"
+  "footer.links.privacy": "Política de Privacidad",
+
+  "product.title": "Producto y Arquitectura",
+  "product.heading": "Plataforma y Arquitectura",
+  "product.overview.title": "Visión General del Sistema",
+  "product.overview.desc": "Centralis opera bajo un modelo SaaS multi-tenancy. Esto garantiza que, aunque múltiples organizaciones usen la misma infraestructura subyacente, los datos de cada empresa estén estrictamente aislados y seguros.",
+  "product.ecosystem.title": "El Ecosistema",
+  "product.ecosystem.desc": "Nuestra plataforma es una sinergia de dos aplicaciones principales:",
+  "product.ecosystem.webPanel": "Panel de Administración Web: Construido con Vue.js, esta interfaz robusta está diseñada para que los Managers configuren los ajustes de la empresa, programen eventos y transmitan anuncios.",
+  "product.ecosystem.mobileApp": "Aplicación Móvil Nativa: Desarrollada en Flutter, esta app proporciona a los empleados acceso en cualquier momento a las noticias de la empresa, chat interno y su calendario de eventos.",
+  "product.roles.title": "Gestión de Roles",
+  "product.roles.desc": "El control de acceso es central para la plataforma. El rol de Manager tiene permisos elevados para administrar datos aislados por su company_id específico. Los empleados tienen acceso personalizado para ver anuncios, participar en chats y confirmar asistencia a eventos de forma segura dentro de su entorno organizacional.",
+
+  "helpCenter.title": "Centro de Ayuda y FAQ",
+  "helpCenter.heading": "Centro de Ayuda",
+  "helpCenter.subtitle": "Preguntas frecuentes sobre Centralis.",
+  "helpCenter.faq1.q": "¿Cómo se mantiene la privacidad de los datos de mi empresa?",
+  "helpCenter.faq1.a": "Centralis utiliza una estricta arquitectura de aislamiento Multi-tenancy. Cada organización se le asigna un identificador único (company_id) que garantiza que sus datos estén lógicamente separados e inaccesibles por cualquier otro inquilino en la plataforma.",
+  "helpCenter.faq2.q": "¿Puedo segmentar información por departamento?",
+  "helpCenter.faq2.a": "Sí. Centralis soporta canales departamentales que permiten a los managers dirigir anuncios específicos y crear espacios de chat dedicados para diferentes equipos dentro de la organización.",
+  "helpCenter.faq3.q": "¿Qué permisos tiene el rol de Manager?",
+  "helpCenter.faq3.a": "Los Managers tienen control administrativo completo sobre el espacio de trabajo de su empresa. Pueden invitar empleados, crear anuncios oficiales, gestionar el calendario de eventos corporativos y supervisar los canales departamentales.",
+  "helpCenter.faq4.q": "¿En qué dispositivos está disponible Centralis?",
+  "helpCenter.faq4.a": "Centralis ofrece un completo Panel de Administración Web para managers y una Aplicación Móvil Nativa totalmente funcional (disponible para iOS y Android) diseñada para que los empleados se mantengan conectados en cualquier lugar."
 }
