@@ -7,44 +7,36 @@ export function getStaticPaths() {
 }
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Title from '../../components/UI/Title.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const faqs = [
-  {
-    q: "How is my company's data privacy maintained?",
-    a: "Centralis utilizes a strict Multi-tenancy isolation architecture. Each organization is assigned a unique identifier (company_id) ensuring that your data is logically separated and inaccessible by any other tenant on the platform."
-  },
-  {
-    q: "Can I segment information by department?",
-    a: "Yes. Centralis supports departmental channels allowing managers to direct specific announcements and create dedicated chat spaces for different teams within the organization."
-  },
-  {
-    q: "What permissions does the Manager role have?",
-    a: "Managers have full administrative control over their company's workspace. They can invite employees, create official announcements, manage the corporate event calendar, and oversee departmental channels."
-  },
-  {
-    q: "On what devices is Centralis available?",
-    a: "Centralis offers a comprehensive Web Administration Panel for managers and a fully-featured Native Mobile Application (available for iOS and Android) tailored for employees to stay connected anywhere."
-  }
+  { q: 'helpCenter.faq1.q', a: 'helpCenter.faq1.a' },
+  { q: 'helpCenter.faq2.q', a: 'helpCenter.faq2.a' },
+  { q: 'helpCenter.faq3.q', a: 'helpCenter.faq3.a' },
+  { q: 'helpCenter.faq4.q', a: 'helpCenter.faq4.a' },
 ];
 ---
-<BaseLayout title="Help Center & FAQ">
+<BaseLayout title={t('helpCenter.title')}>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <div class="text-center mb-16">
-      <Title as="h1" class="text-4xl font-extrabold text-[var(--color-neutral)] mb-4">Help Center</Title>
-      <p class="text-xl text-[var(--color-tertiary)]">Frequently asked questions about Centralis.</p>
+      <Title as="h1" class="text-4xl font-extrabold text-[var(--color-neutral)] mb-4">{t('helpCenter.heading')}</Title>
+      <p class="text-xl text-[var(--color-tertiary)]">{t('helpCenter.subtitle')}</p>
     </div>
 
     <div class="space-y-6">
       {faqs.map((faq) => (
         <details class="group bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden cursor-pointer">
           <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-[var(--color-neutral)] hover:bg-gray-50 transition-colors">
-            <span class="text-lg font-bold">{faq.q}</span>
+            <span class="text-lg font-bold">{t(faq.q)}</span>
             <span class="transition group-open:rotate-180">
               <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
             </span>
           </summary>
           <div class="p-6 pt-0 text-[var(--color-tertiary)] group-open:animate-fadeIn">
-            <p>{faq.a}</p>
+            <p>{t(faq.a)}</p>
           </div>
         </details>
       ))}
