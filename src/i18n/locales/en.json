@@ -3,14 +3,11 @@
   "nav.howItWorks": "How it works",
   "nav.product": "Product",
   "nav.helpCenter": "Help Center",
-  "nav.signIn": "Sign In",
   "nav.startMeeting": "Start Meeting",
-  
   "hero.title": "Where your team stays aligned",
   "hero.subtitle": "The centralized hub for official announcements, corporate events, and real-time internal communication. Keep every employee connected to the company's vision.",
   "hero.getStarted": "Get Started",
   "hero.explore": "Explore Features",
-  
   "features.title": "Engineered for Corporate Cohesion",
   "features.card1.title": "Official Announcements",
   "features.card1.desc": "Broadcast important updates clearly.",
@@ -18,23 +15,17 @@
   "features.card2.desc": "Schedule and manage corporate events effortlessly.",
   "features.card3.title": "Secure Internal Chat",
   "features.card3.desc": "Communicate safely within your organization.",
-  
   "steps.title": "Three Steps to a Connected Workspace",
   "steps.step1": "1. Centralize Information",
   "steps.step2": "2. Organize and Schedule",
   "steps.step3": "3. Engage and Collaborate",
-  
   "cta.title": "Ready to unite your workforce?",
   "cta.startFree": "Start for Free",
-  "cta.bookDemo": "Book a Demo",
-  
   "footer.mission": "Transforming internal communication for modern SMEs.",
-  "footer.rights": "© 2024 Centralis by Fudi. All rights reserved.",
+  "footer.rights": "© 2026 Centralis by Fudi. All rights reserved.",
   "footer.links.product": "Product",
-  "footer.links.about": "About Team",
   "footer.links.help": "Help Center",
   "footer.links.privacy": "Privacy Policy",
-
   "product.title": "Product & Architecture",
   "product.heading": "Platform & Architecture",
   "product.overview.title": "System Overview",
@@ -45,7 +36,6 @@
   "product.ecosystem.mobileApp": "Employee Mobile App: All employees use the same mobile application to access company news, participate in internal chat, view their event calendar, and RSVP securely.",
   "product.roles.title": "Role Management",
   "product.roles.desc": "Access control is central to the platform. The Manager role has elevated permissions to administer data isolated by their specific company_id. Employees have tailored access to view announcements, participate in chats, and RSVP to events securely within their organizational environment.",
-
   "helpCenter.title": "Help Center & FAQ",
   "helpCenter.heading": "Help Center",
   "helpCenter.subtitle": "Frequently asked questions about Centralis.",
