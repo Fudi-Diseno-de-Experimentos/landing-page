@@ -46,5 +46,14 @@
   "helpCenter.faq3.q": "¿Qué permisos tiene el rol de Manager?",
   "helpCenter.faq3.a": "Los Managers tienen control administrativo completo sobre el espacio de trabajo de su empresa. Pueden invitar empleados, crear anuncios oficiales, gestionar el calendario de eventos corporativos y configurar los ajustes de la empresa.",
   "helpCenter.faq4.q": "¿En qué dispositivos móviles está disponible Centralis?",
-  "helpCenter.faq4.a": "Centralis está disponible como una Aplicación Móvil Nativa totalmente funcional para iOS y Android, diseñada para que todos los usuarios se mantengan conectados en cualquier lugar."
+  "helpCenter.faq4.a": "Centralis está disponible como una Aplicación Móvil Nativa totalmente funcional para iOS y Android, diseñada para que todos los usuarios se mantengan conectados en cualquier lugar.",
+  "nav.about": "Sobre nosotros",
+  "footer.links.about": "Sobre nosotros",
+  "about.title": "Sobre el Equipo y Misión",
+  "about.heading": "Conoce a nuestro equipo",
+  "about.desc": "El equipo detrás de Centralis está comprometido con transformar la comunicación interna de las PyMEs mediante tecnología moderna y accesible.",
+  "about.video.title": "Conoce a nuestro equipo",
+  "about.video.desc": "Un vistazo al equipo y la pasión detrás de Centralis.",
+  "product.video.title": "Demostración del Producto",
+  "product.video.desc": "Mira cómo Centralis te ayuda a mantener a tu equipo alineado y conectado en tiempo real."
 }

@@ -1,0 +1,104 @@
+---
+import Title from '../UI/Title.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Custom keys for translation or fallback lists of permissions
+const managerPermissions = lang === 'es' ? [
+  'Control administrativo total de la organización',
+  'Invitar y gestionar cuentas de empleados',
+  'Emitir anuncios y comunicados oficiales',
+  'Programar y coordinar eventos corporativos',
+  'Configurar ajustes de la empresa'
+] : [
+  'Full administrative control of the organization',
+  'Invite and manage employee accounts',
+  'Broadcast official announcements and news',
+  'Schedule and coordinate corporate events',
+  'Configure company settings'
+];
+
+const employeePermissions = lang === 'es' ? [
+  'Acceso seguro y aislado por company_id',
+  'Visualizar anuncios oficiales en tiempo real',
+  'Participar en salas de chat interno autorizadas',
+  'Ver calendario de eventos y confirmar asistencia (RSVP)'
+] : [
+  'Secure and isolated access via company_id',
+  'View official announcements in real time',
+  'Participate in authorized internal chat rooms',
+  'View event calendar and RSVP securely'
+];
+---
+
+<section class="mb-12 bg-[var(--color-neutral)] text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+  <!-- Decorative background shapes -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-[var(--color-primary)]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-5 space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[var(--color-secondary)] text-sm font-semibold tracking-wide uppercase">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+        <span>{t('product.roles.title')}</span>
+      </div>
+      <Title as="h2" class="text-3xl font-extrabold text-white tracking-tight">
+        {t('product.roles.title')}
+      </Title>
+      <p class="text-lg text-[var(--color-secondary)] leading-relaxed">
+        {t('product.roles.desc')}
+      </p>
+    </div>
+
+    <div class="lg:col-span-7 space-y-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Manager Permissions Card -->
+        <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="p-2 rounded-lg bg-[var(--color-primary)] text-white">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </span>
+            <Title as="h4" class="text-lg font-bold text-white">Manager</Title>
+          </div>
+          <ul class="space-y-3 text-sm text-[var(--color-secondary)]">
+            {managerPermissions.map(permission => (
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{permission}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Employee Permissions Card -->
+        <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="p-2 rounded-lg bg-[var(--color-secondary)]/20 text-white">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </span>
+            <Title as="h4" class="text-lg font-bold text-white">Employee</Title>
+          </div>
+          <ul class="space-y-3 text-sm text-[var(--color-secondary)]">
+            {employeePermissions.map(permission => (
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-[var(--color-secondary)] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{permission}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

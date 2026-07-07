@@ -1,0 +1,41 @@
+---
+import Title from '../UI/Title.astro';
+import YouTubeEmbed from '../UI/YouTubeEmbed.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="mb-20 bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm relative overflow-hidden">
+  <!-- Subtle decorative background gradient -->
+  <div class="absolute -top-40 -right-40 w-80 h-80 bg-[var(--color-secondary)]/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-[var(--color-primary)]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-5 space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-semibold tracking-wide uppercase">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+        <span>{t('product.overview.title')}</span>
+      </div>
+      <Title as="h2" class="text-3xl md:text-4xl font-extrabold text-[var(--color-neutral)] tracking-tight leading-tight">
+        {t('product.heading')}
+      </Title>
+      <p class="text-lg text-[var(--color-tertiary)] leading-relaxed">
+        {t('product.overview.desc')}
+      </p>
+    </div>
+
+    <div class="lg:col-span-7 space-y-4">
+      <div class="bg-[var(--color-background)] rounded-2xl p-4 border border-gray-100/50">
+        <div class="mb-4 text-center lg:text-left">
+          <Title as="h3" class="text-lg font-bold text-[var(--color-neutral)]">{t('product.video.title')}</Title>
+          <p class="text-sm text-[var(--color-tertiary)]">{t('product.video.desc')}</p>
+        </div>
+        <YouTubeEmbed videoId="7WiTAeqMg94" title={t('product.video.title')} />
+      </div>
+    </div>
+  </div>
+</section>

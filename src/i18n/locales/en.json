@@ -46,5 +46,14 @@
   "helpCenter.faq3.q": "What permissions does the Manager role have?",
   "helpCenter.faq3.a": "Managers have full administrative control over their company's workspace. They can invite employees, create official announcements, manage the corporate event calendar, and configure company settings.",
   "helpCenter.faq4.q": "On which mobile devices is Centralis available?",
-  "helpCenter.faq4.a": "Centralis is available as a fully-featured Native Mobile Application for both iOS and Android, designed for all users to stay connected anywhere."
+  "helpCenter.faq4.a": "Centralis is available as a fully-featured Native Mobile Application for both iOS and Android, designed for all users to stay connected anywhere.",
+  "nav.about": "About Us",
+  "footer.links.about": "About Us",
+  "about.title": "About the Team & Mission",
+  "about.heading": "Meet Our Team",
+  "about.desc": "The team behind Centralis is dedicated to transforming internal communication for modern SMEs through accessible, state-of-the-art technology.",
+  "about.video.title": "Meet Our Team",
+  "about.video.desc": "A sneak peek at the team and passion driving Centralis.",
+  "product.video.title": "Product Demo",
+  "product.video.desc": "See how Centralis helps you keep your team aligned and connected in real time."
 }

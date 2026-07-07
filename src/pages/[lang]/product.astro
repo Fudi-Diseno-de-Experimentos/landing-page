@@ -6,41 +6,18 @@ export function getStaticPaths() {
   ];
 }
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Title from '../../components/UI/Title.astro';
+import ProductOverview from '../../components/Product/ProductOverview.astro';
+import ProductEcosystem from '../../components/Product/ProductEcosystem.astro';
+import ProductRoles from '../../components/Product/ProductRoles.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 <BaseLayout title={t('product.title')}>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <Title as="h1" class="text-4xl font-extrabold text-[var(--color-neutral)] mb-8">{t('product.heading')}</Title>
-    
-    <div class="space-y-12 text-lg text-[var(--color-neutral)]">
-      <section>
-        <Title as="h2" class="text-2xl font-bold mb-4 text-[var(--color-primary)]">{t('product.overview.title')}</Title>
-        <p class="mb-4">
-          {t('product.overview.desc')}
-        </p>
-      </section>
-
-      <section>
-        <Title as="h2" class="text-2xl font-bold mb-4 text-[var(--color-primary)]">{t('product.ecosystem.title')}</Title>
-        <p class="mb-4">
-          {t('product.ecosystem.desc')}
-        </p>
-        <ul class="list-disc pl-6 space-y-2">
-          <li><strong>{t('product.ecosystem.webPanel')}</strong></li>
-          <li><strong>{t('product.ecosystem.mobileApp')}</strong></li>
-        </ul>
-      </section>
-
-      <section>
-        <Title as="h2" class="text-2xl font-bold mb-4 text-[var(--color-primary)]">{t('product.roles.title')}</Title>
-        <p class="mb-4">
-          {t('product.roles.desc')}
-        </p>
-      </section>
-    </div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <ProductOverview />
+    <ProductEcosystem />
+    <ProductRoles />
   </div>
 </BaseLayout>

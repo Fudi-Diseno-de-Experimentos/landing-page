@@ -1,0 +1,35 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+  ];
+}
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Title from '../../components/UI/Title.astro';
+import YouTubeEmbed from '../../components/UI/YouTubeEmbed.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<BaseLayout title={t('about.title')}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center mb-12">
+      <Title as="h1" class="text-4xl font-extrabold text-[var(--color-neutral)] mb-4">{t('about.heading')}</Title>
+      <p class="text-lg text-[var(--color-tertiary)] max-w-2xl mx-auto">
+        {t('about.desc')}
+      </p>
+    </div>
+    
+    <div class="space-y-12 text-lg text-[var(--color-neutral)]">
+      <section class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+        <Title as="h2" class="text-2xl font-bold mb-4 text-[var(--color-primary)] text-center">{t('about.video.title')}</Title>
+        <p class="text-base text-[var(--color-tertiary)] text-center mb-8">
+          {t('about.video.desc')}
+        </p>
+        <YouTubeEmbed videoId="BvDnRh4SbC4" title={t('about.video.title')} />
+      </section>
+    </div>
+  </div>
+</BaseLayout>
